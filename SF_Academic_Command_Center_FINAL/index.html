@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10121a">
+    <title>SF Academic | Strategy First</title>
+    <link rel="icon" href="assets/img/strategy-first-crest.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem('sf_academic_theme')||'dark'}catch(e){}</script>
+  </head>
+  <body>
+    <div id="app-shell">
+      <div class="sidebar-scrim" id="sidebarScrim"></div>
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="brand">
+          <div class="brand-symbol"><img src="assets/img/strategy-first-crest.png" alt="Strategy First crest"></div>
+          <div class="brand-copy"><strong>STRATEGY FIRST</strong><span>ACADEMIC <em>OS</em></span></div><button class="side-close" data-action="close-menu" aria-label="Close navigation"><i data-icon="x"></i></button></div>
+        <div class="sidebar-scroll">
+          <div class="nav-eyebrow">WORKSPACE</div>
+          <nav class="side-links" id="mainNav">
+    <button class="side-link active" data-view="overview"><i data-icon="layout"></i><span>Overview</span><span class="nav-hotkey">01</span></button>
+    <button class="side-link" data-view="students"><i data-icon="users"></i><span>Students</span></button>
+    <button class="side-link" data-view="courses"><i data-icon="book"></i><span>Programmes</span></button>
+    <button class="side-link" data-view="attendance"><i data-icon="calendar-check"></i><span>Attendance</span></button>
+    <button class="side-link" data-view="assignments"><i data-icon="clipboard"></i><span>Assignments</span><span class="nav-count" id="assignmentCount">4</span></button>
+    <button class="side-link" data-view="timetable"><i data-icon="calendar"></i><span>Timetable</span></button>
+   </nav>
+          <div class="nav-eyebrow secondary-nav">INSIGHTS & TOOLS</div>
+          <nav class="side-links">
+    <button class="side-link" data-view="reports"><i data-icon="chart"></i><span>Analytics & reports</span></button>
+    <button class="side-link" data-view="settings"><i data-icon="settings"></i><span>Workspace settings</span></button>
+   </nav>
+          <div class="sidebar-promo"><span class="tiny-kicker"><span class="status-pulse"></span> ACADEMIC EXCELLENCE</span><div class="promo-art"><i data-icon="graduation"></i><i data-icon="sparkles"></i></div>
+            <h3>Make every learning moment count.</h3>
+            <p>People, progress and performance. In perfect sync.</p><button class="text-action" data-view="reports">Explore insights <i data-icon="arrow-up-right"></i></button></div>
+        </div>
+        <div class="sidebar-bottom">
+          <div class="staff-avatar">KP</div>
+          <div class="staff-person"><strong>Academic Team</strong><small>Workspace administrator</small></div><button class="icon-button more-button" data-view="settings" aria-label="Settings"><i data-icon="more"></i></button></div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="topbar-left"><button class="icon-button mobile-menu" data-action="open-menu" aria-label="Open navigation"><i data-icon="menu"></i></button><div class="breadcrumbs"><span>Strategy First</span><i data-icon="chevron-right"></i><strong id="crumbCurrent">Overview</strong></div>
+          </div>
+          <div class="topbar-right"><button class="search-trigger" id="openSearch" data-action="search" aria-label="Open command search"><i data-icon="search"></i><span>Search anything...</span><kbd>Ctrl K</kbd></button><button class="icon-button" id="themeToggle" data-action="theme" aria-label="Switch color mode"><i data-icon="moon"></i></button><button class="icon-button motion-top" data-action="motion" title="Toggle animations" aria-label="Toggle motion"><i data-icon="sparkles"></i></button><div class="notification-wrap"><button class="icon-button notification-button" data-action="notifications" aria-label="View notifications"><i data-icon="bell"></i><span class="dot-notification"></span></button><div class="notification-panel" id="notificationPanel" hidden></div>
+            </div>
+            <div class="topbar-user">KP</div>
+          </div>
+        </header>
+        <main id="pageContent" class="page-content" tabindex="-1"></main>
+        <footer class="app-footer"><span>© 2026 Strategy First · Academic Command Center</span><span>Developed by <strong>Ko Kyi Phyu Aung</strong> · <a href="mailto:kyiphyuaung@strategyfirst.edu.mm">kyiphyuaung@strategyfirst.edu.mm</a></span></footer>
+      </div>
+    </div>
+    <div class="toast-holder" id="toastHolder" aria-live="polite"></div>
+    <div class="modal-shell" id="modalShell" hidden>
+      <div class="modal-shade" data-action="close-modal"></div>
+      <section role="dialog" aria-modal="true" aria-labelledby="modalTitle" class="sf-modal">
+        <div class="sf-modal-head">
+          <div><span class="eyebrow">STRATEGY FIRST / WORKSPACE</span><h2 id="modalTitle"></h2>
+          </div><button class="icon-button" data-action="close-modal" aria-label="Close modal"><i data-icon="x"></i></button></div>
+        <div id="modalContent"></div>
+      </section>
+    </div>
+    <div class="command-shell" id="commandShell" hidden>
+      <div class="command-shade" data-action="close-search"></div>
+      <div class="command-dialog" role="dialog" aria-modal="true" aria-label="Search workspace">
+        <div class="command-input-wrap"><i data-icon="search"></i><input id="commandInput" placeholder="Search students, programmes, pages..." autocomplete="off"><kbd>ESC</kbd></div>
+        <div class="command-results" id="commandResults"></div>
+        <div class="command-foot">Search workspace <span>•</span> Click to open result</div>
+      </div>
+    </div>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
